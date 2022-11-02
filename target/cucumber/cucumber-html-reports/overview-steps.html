@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>No Name (add projectName to cucumber-reporting.properties)</td>
+      <td>02 Nov 2022, 16:16</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.meetSky.step_definitions.File_functionalities_stepDefinitions.click_the_option_and_name_the_folder_then_click_the_arrow()</td>
+              <td>1</td>
+              <td class="duration" data-value="948559000">0.948</td>
+              <td class="duration" data-value="948559000">0.948</td>
+              <td class="duration" data-value="948559000">0.948</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.meetSky.step_definitions.File_functionalities_stepDefinitions.click_the_option_and_name_the_folder_with_an_already_existing_name_then_click_the_arrow()</td>
+              <td>1</td>
+              <td class="duration" data-value="1047127000">1.047</td>
+              <td class="duration" data-value="1047127000">1.047</td>
+              <td class="duration" data-value="1047127000">1.047</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.meetSky.step_definitions.File_functionalities_stepDefinitions.user_is_on_the_login_page()</td>
+              <td>8</td>
+              <td class="duration" data-value="19178081500">19.178</td>
+              <td class="duration" data-value="19178081500">20.796</td>
+              <td class="duration" data-value="153424652000">2:33.424</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.meetSky.step_definitions.File_functionalities_stepDefinitions.user_should_click_files_icon_at_left_top()</td>
+              <td>8</td>
+              <td class="duration" data-value="3762615000">3.762</td>
+              <td class="duration" data-value="3762615000">4.181</td>
+              <td class="duration" data-value="30100920000">30.100</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.meetSky.step_definitions.File_functionalities_stepDefinitions.user_should_click_plus_sign()</td>
+              <td>2</td>
+              <td class="duration" data-value="1152292500">1.152</td>
+              <td class="duration" data-value="1152292500">1.261</td>
+              <td class="duration" data-value="2304585000">2.304</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.meetSky.step_definitions.File_functionalities_stepDefinitions.user_should_click_plus_sign_and_select_the_new_text_file_option_name_the_folder_and_click_the_arrow()</td>
+              <td>1</td>
+              <td class="duration" data-value="10370202000">10.370</td>
+              <td class="duration" data-value="10370202000">10.370</td>
+              <td class="duration" data-value="10370202000">10.370</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.meetSky.step_definitions.File_functionalities_stepDefinitions.user_should_click_plus_sign_and_select_the_new_text_file_option_name_the_folder_with_an_existing_text_file_name_and_click_the_arrow()</td>
+              <td>1</td>
+              <td class="duration" data-value="1991723000">1.991</td>
+              <td class="duration" data-value="1991723000">1.991</td>
+              <td class="duration" data-value="1991723000">1.991</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.meetSky.step_definitions.File_functionalities_stepDefinitions.user_should_click_three_dots_of_a_folder_and_select_move_or_copy_option()</td>
+              <td>2</td>
+              <td class="duration" data-value="1366220500">1.366</td>
+              <td class="duration" data-value="1366220500">1.547</td>
+              <td class="duration" data-value="2732441000">2.732</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.meetSky.step_definitions.File_functionalities_stepDefinitions.user_should_click_three_dots_of_a_folder_and_select_option()</td>
+              <td>1</td>
+              <td class="duration" data-value="1748935000">1.748</td>
+              <td class="duration" data-value="1748935000">1.748</td>
+              <td class="duration" data-value="1748935000">1.748</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.meetSky.step_definitions.File_functionalities_stepDefinitions.user_should_select_a_target_folder_and_click_to_copy_to_folder_name()</td>
+              <td>1</td>
+              <td class="duration" data-value="1168230000">1.168</td>
+              <td class="duration" data-value="1168230000">1.168</td>
+              <td class="duration" data-value="1168230000">1.168</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.meetSky.step_definitions.File_functionalities_stepDefinitions.user_should_select_a_target_folder_and_click_to_move_to_folder_name()</td>
+              <td>1</td>
+              <td class="duration" data-value="784050000">0.784</td>
+              <td class="duration" data-value="784050000">0.784</td>
+              <td class="duration" data-value="784050000">0.784</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.meetSky.step_definitions.File_functionalities_stepDefinitions.verify_that_already_exists_message_is_displayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="269395000">0.269</td>
+              <td class="duration" data-value="269395000">0.269</td>
+              <td class="duration" data-value="269395000">0.269</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.meetSky.step_definitions.File_functionalities_stepDefinitions.verify_that_chosen_folder_is_copied_into_the_target_folder()</td>
+              <td>1</td>
+              <td class="duration" data-value="9060744000">9.060</td>
+              <td class="duration" data-value="9060744000">9.060</td>
+              <td class="duration" data-value="9060744000">9.060</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.meetSky.step_definitions.File_functionalities_stepDefinitions.verify_that_chosen_folder_is_moved_to_the_target_folder()</td>
+              <td>1</td>
+              <td class="duration" data-value="1491532000">1.491</td>
+              <td class="duration" data-value="1491532000">1.491</td>
+              <td class="duration" data-value="1491532000">1.491</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.meetSky.step_definitions.File_functionalities_stepDefinitions.verify_that_message_is_displayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="210326000">0.210</td>
+              <td class="duration" data-value="210326000">0.210</td>
+              <td class="duration" data-value="210326000">0.210</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.meetSky.step_definitions.File_functionalities_stepDefinitions.verify_that_new_created_folder_is_appeared_on_the_folder_lists()</td>
+              <td>1</td>
+              <td class="duration" data-value="9322516000">9.322</td>
+              <td class="duration" data-value="9322516000">9.322</td>
+              <td class="duration" data-value="9322516000">9.322</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.meetSky.step_definitions.File_functionalities_stepDefinitions.verify_that_new_created_text_file_is_appeared_on_the_folder_lists()</td>
+              <td>1</td>
+              <td class="duration" data-value="469345000">0.469</td>
+              <td class="duration" data-value="469345000">0.469</td>
+              <td class="duration" data-value="469345000">0.469</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.meetSky.step_definitions.File_functionalities_stepDefinitions.verify_that_newly_deleted_file_appeared_inside_the()</td>
+              <td>1</td>
+              <td class="duration" data-value="1812754000">1.812</td>
+              <td class="duration" data-value="1812754000">1.812</td>
+              <td class="duration" data-value="1812754000">1.812</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.meetSky.step_definitions.File_functionalities_stepDefinitions.verify_that_user_should_see_the_total_number_of_files_and_folders_under_the_files_list_table()</td>
+              <td>1</td>
+              <td class="duration" data-value="770555000">0.770</td>
+              <td class="duration" data-value="770555000">0.770</td>
+              <td class="duration" data-value="770555000">0.770</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.meetSky.step_definitions.Hooks.setupMetod()</td>
+              <td>8</td>
+              <td class="duration" data-value="9341815000">9.341</td>
+              <td class="duration" data-value="9341815000">10.895</td>
+              <td class="duration" data-value="74734520000">1:14.734</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.meetSky.step_definitions.Hooks.tearDownScenario(io.cucumber.java.Scenario)</td>
+              <td>8</td>
+              <td class="duration" data-value="113410625">0.113</td>
+              <td class="duration" data-value="113410625">0.181</td>
+              <td class="duration" data-value="907285000">0.907</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>21</td>
+            <td>51</td>
+            <td class="duration">5.993</td>
+            <td class="duration">2:33.424</td>
+            <td class="duration">5:5.670</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

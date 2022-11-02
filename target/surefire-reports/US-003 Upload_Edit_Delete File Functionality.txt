@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: US-003 Upload/Edit/Delete File Functionality
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 306.056 s - in US-003 Upload/Edit/Delete File Functionality
